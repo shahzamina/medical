@@ -6,7 +6,7 @@ import CreatableSelect from 'react-select/creatable';
 const Parts = ({part=[],h1,p1,img,h2,p,style}) => {
     const [selectedManufacturer, setSelectedManufacturer] = useState(null);
   const [selectedModality, setSelectedModality] = useState(null);
-const [open,setopen]=useState(false)
+
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9; // you can change this to 6, 9, etc.
@@ -184,16 +184,18 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
           color: 'white',
         },
       }),
-      clearIndicator: (base) => ({
-        ...base,
-        color: '#39FF14',
-        '&:hover': { color: '#00BFFF' },
-      }),
-      dropdownIndicator: (base) => ({
-        ...base,
-        color: '#39FF14',
-        '&:hover': { color: '#00BFFF' },
-      }),
+    clearIndicator: (base) => ({
+  ...base,
+  color: '#1E90FF', // solid blue always
+   '&:hover': { color: '#0077AA' },
+}),
+dropdownIndicator: (base) => ({
+  ...base,
+  color: '#1E90FF',
+    '&:hover': { color: '#0077AA' },
+}),
+
+
     }}
   />
 </div>
@@ -212,38 +214,45 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
     isValidNewOption={() => false}
     formatCreateLabel={() => null}
     styles={{
-      control: (base) => ({
+      control: (base, state) => ({
         ...base,
-        borderColor: '#39FF14',
-        boxShadow: 'none',
-        '&:hover': { borderColor: '#39FF14' },
+        border: `2px solid ${state.isFocused ? '#1E90FF' : '#0046A0'}`, // blue border
+        boxShadow: state.isFocused
+          ? '0 0 4px rgba(30,144,255,0.4)' // soft glow when focused
+          : 'none',
         backgroundColor: 'white',
-        color: 'black',
+        color: '#0046A0',
         borderRadius: '12px',
+        transition: 'all 0.3s ease',
         cursor: !selectedManufacturer ? 'not-allowed' : 'pointer',
+        opacity: !selectedManufacturer ? 0.6 : 1,
+        '&:hover': {
+          borderColor: '#1E90FF',
+        },
       }),
-      input: (base) => ({ ...base, color: 'black' }),
+      input: (base) => ({ ...base, color: '#0046A0' }),
       placeholder: (base) => ({
         ...base,
-        color: !selectedManufacturer ? '#aaa' : '#888',
+        color: '#4A76C9',
         fontStyle: 'italic',
       }),
-      singleValue: (base) => ({ ...base, color: 'black' }),
+      singleValue: (base) => ({ ...base, color: '#0046A0' }),
       menu: (base) => ({
         ...base,
-        background: 'linear-gradient(to bottom, #001A4D, #0046A0)',
+        background: 'white',
         borderRadius: 0,
-        border: '1px solid #0046A0',
         marginTop: 2,
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
       }),
       option: (base, state) => ({
         ...base,
+        textAlign: 'left',
+        padding: '12px 14px',
         background: state.isFocused
-          ? 'linear-gradient(to right, #00BFFF, #00E5FF)'
+          ? 'linear-gradient(to right, #00BFFF, #1E90FF, #104E8B)'
           : 'transparent',
-        color: state.isFocused ? 'white' : 'black',
+        color: state.isFocused ? 'white' : '#0046A0',
         cursor: 'pointer',
-        borderBottom: '1px solid #0046A0',
         transition: 'all 0.3s ease',
         '&:last-child': { borderBottom: 'none' },
         '&:active': {
@@ -253,17 +262,18 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
       }),
       clearIndicator: (base) => ({
         ...base,
-        color: '#39FF14',
-        '&:hover': { color: '#00BFFF' },
+        color: '#1E90FF', // solid blue always
+        '&:hover': { color: '#0077AA' },
       }),
       dropdownIndicator: (base) => ({
         ...base,
-        color: '#39FF14',
-        '&:hover': { color: '#00BFFF' },
+        color: '#1E90FF', // solid blue arrow
+        '&:hover': { color: '#0077AA' },
       }),
     }}
   />
 </div>
+
 
   </div>
 
@@ -279,10 +289,10 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
         {currentItems.map((v, idx) => (
           <div
             key={idx}
-            className="w-80 h-80 shadow-lg rounded-sm transform transition duration-300 hover:-translate-y-0.5 hover:scale-102"
+            className="overflow-hidden w-80 h-80 shadow-lg rounded-sm transform transition duration-300 hover:-translate-y-0.5 hover:scale-102"
           >
             <Link style={{textDecoration:'none'}} to={v.link} className="text-black no-underline">
-              <img className="w-full h-55 object-cover" src={v.img} alt={v.p} />
+              <img className="w-full h-55 object-cover  bg-white" src={v.img} alt={v.p} />
               <h6 className="font-bold px-4 mt-2">{v.p}</h6>
             </Link>
           </div>

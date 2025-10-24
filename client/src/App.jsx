@@ -96,6 +96,8 @@ import Equip from './components/Equip';
 
 import Services from './components/Services';
 import About from './components/About';
+import Sign from './components/Sign';
+import Showcase from './components/Showcase';
 function App() {
 
   return (
@@ -200,9 +202,10 @@ function App() {
 <Route path='xrypro' element={<Xraypro />}  />
 <Route path='xctpro' element={<Xctpro />}  />
 <Route path='equip' element={<Equip />}  />
-<Route path='contact' element={<Contact />}  />
+<Route path='sign' element={<Sign />}  />
 <Route path='ser' element={<Services />}  />
 <Route path='about' element={<About />}  />
+<Route path='show' element={<Showcase />}  />
 </Routes>
   <Navbar  />
 <Footer  />

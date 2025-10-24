@@ -24,7 +24,7 @@ const Navbar = () => {
     }, []);
   return (
     <div>
-      <nav className={`border border-black  fixed top-0 left-0  w-full sm:w-full  lg:w-full z-50 flex flex-row justify-between items-center
+      <nav className={`fixed top-0 left-0  w-full sm:w-full  lg:w-full z-50 flex flex-row justify-between items-center
     px-4 sm:px-6 md:px-10 lg:px-16 
     h-20 sm:h-24 
       ${isScrolled ? 'bg-white/70 shadow-md' : 'bg-transparent'}
@@ -106,7 +106,7 @@ const Navbar = () => {
         ? 'text-black hover:text-gray-700 hover:border-black'
         : 'text-white hover:text-gray-200 hover:border-white'
       }`}>Who we are</li></Link>
-         <Link to='/contact'><li className={` font-bold text-lg border-b-2 border-transparent  cursor-pointer transition-all duration-300  inline-block  ${isScrolled
+         <Link to='/sign'><li className={` font-bold text-lg border-b-2 border-transparent  cursor-pointer transition-all duration-300  inline-block  ${isScrolled
         ? 'text-black hover:text-gray-700 hover:border-black'
         : 'text-white hover:text-gray-200 hover:border-white'
       }`}>Contact Us</li></Link>

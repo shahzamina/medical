@@ -19,7 +19,8 @@ const img='/images/ctscan.jpg'
           {img:'/images/ctrtm.jpg', p:'PX74-09747-1 - Toshiba - CT Scan - RTM Assembly Board ', link:'/ctrt'},
           {img:'/images/ct62.jpg', p:'PX74-08902C - TOSHIBA AQUILION - CT Scan - SS/ADIS PWB BOARD - YWM1663-A', link:'/ctss'},
           {img:'/images/ct72.jpg', p:'5175034 - GE Healthcare - CT Scan - VCT Collimator Control Board - 5175035 REV 3', link:'/ctvct'},
-        
+                      {img:'/images/xrct2.jpg', p:'5407237-6 - GE Healthcare - CT Scan - PPC KV Control V3 Board - 5308266 rev 1', link:'/xrct'},
+          {img:'/images/xrct4.jpg', p:'5407237-6 - GE Healthcare - CT Scan - PPC KV Control V3 Board - 5308266 rev 1', link:'/xrctpp'},
          
         ];
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const Allparts = ({part}) => {
-
+const navigate=useNavigate()
    
 
   return (
@@ -24,7 +24,7 @@ const Allparts = ({part}) => {
                             key={part.id}>
                             <div className=" w-[80%] mt-10 ml-20 h-[400px] overflow-hidden">
   <img
-    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+    className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
     src={part.img}
     alt={part.p}
   />
@@ -53,7 +53,37 @@ const Allparts = ({part}) => {
                             <h5  className='!font-bold !text-2xl'>{part.h4}</h5>
                             <h5  className='!font-normal  !text-xl mt-1 text-gray-400'>{part.p4}</h5>
                             </div>
-                            <button className='flex items-left p-3 bg-amber-600 w-55 mt-4'>{part.btn}</button>
+                          <div className="flex justify-left mt-10">
+                           <button
+    onClick={() => {
+      // Replace with your navigation logic
+      navigate("/sign")
+      console.log("Button clicked");
+    }}
+    className="relative inline-flex items-center justify-center font-semibold group w-full sm:w-auto"
+  >
+    {/* Expanding circle */}
+    <span
+      className="absolute left-0 w-40 sm:w-10 h-10 border-2 p-4 border-[#39FF14] rounded-full flex items-center justify-center 
+                 overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[180px]"
+    >
+      {/* '>' fades out on hover (only on lg) */}
+      <span className="hidden lg:block absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
+        &gt;
+      </span>
+
+      {/* Text inside circle for small screens */}
+      <span className="block sm:hidden text-black text-sm font-semibold">
+        Get A Quote
+      </span>
+    </span>
+
+    {/* Text outside circle for large screens */}
+    <span className="hidden sm:inline-block relative text-lg text-black pl-16 pr-4  transition-all duration-700 ease-in-out">
+      Get A Quote
+    </span>
+  </button>
+  </div>
                         </div>
                  </>
                      

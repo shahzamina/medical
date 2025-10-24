@@ -51,7 +51,8 @@ const Xraypro = () => {
           {img:'/images/xryxpc1.jpg', p:'40645 - SEDECAL - X-Ray - XPC Interface Control Board - A8186-03', link:'/xrxpc'},
           {img:'/images/xryXrii1.jpg', p:'264469G - GE Healthcare - X-Ray - XRII/IRIS Control Board - 46-264468G4-B', link:'/xrxri'},
           {img:'/images/xryxtcon1.jpg', p:'2146643 - GE Healthcare - X-Ray - XT Control Board - 2146642 B', link:'/xrxt'},
-        
+         {img:'/images/xrct2.jpg', p:'5407237-6 - GE Healthcare - X-Ray - PPC KV Control V3 Board - 5308266 rev 1', link:'/xrct'},
+          {img:'/images/xrct4.jpg', p:'5407237-6 - GE Healthcare - X-Ray - PPC KV Control V3 Board - 5308266 rev 1', link:'/xrctpp'}
         ];
   return (
     <div>

@@ -2,15 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 const Equip = () => {
   const categories = [
+     { link:'/mripro', img: '/images/mri.png', name: 'MRI' },
   { link:'/ctpro', img: '/images/ctt.png', name: 'CT Scan' },
   { link:'/xraypro', img: '/images/xr.png', name: 'X-Ray' },
-   { link:'/xctpro', img: '/images/cttt.png', name: 'X-Ray & CT Scan' },
-  { link:'/mripro', img: '/images/mri.png', name: 'MRI' },
-  { link:'/crpro', img: '/images/crr.png', name: 'CR' },
   { link:'/ultrapro', img: '/images/uu.png', name: 'Ultrasound' },
-  { link:'/fluopro', img: '/images/ff.png', name: 'Fluoroscopy' },
   { link:'/mampro', img: '/images/mm.png', name: 'Mammography' },
+  { link:'/fluopro', img: '/images/ff.png', name: 'Fluoroscopy' },
+  { link:'/gampro', img: '/images/cttt.png', name: 'Gamma Camera' },
   { link:'/angpro', img: '/images/aa.png', name: 'Angiography' },
+    { link:'/crpro', img: '/images/crr.png', name: 'CR' },
 ];
   return (
     <div>
@@ -60,7 +60,10 @@ const Equip = () => {
           style={{textDecoration:'none'}}
             to={cat.link}
             key={index}
-            className="flex flex-col text-black items-center justify-center w-60 h-60 bg-white border border-gray-200 rounded-sm shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer no-underline"
+              className="flex flex-col text-black items-center justify-center w-60 h-60 bg-white border border-gray-200 rounded-sm 
+             shadow-[0px_0px_6px_#0077AA,_-0px_-0px_6px_#1E90FF]
+             hover:shadow-[0px_0px_8px_#0077AA,_-0px_-0px_8px_#1E90FF]
+             hover:scale-105 transition-all duration-300 cursor-pointer no-underline"
           >
             <img
               src={cat.img}

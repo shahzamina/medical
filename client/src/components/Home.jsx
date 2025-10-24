@@ -107,7 +107,7 @@ const Home = () => {
   {/* Expanding circle */}
   <span
     className="absolute left-0 w-40 sm:w-10 h-10 border-2 p-4 border-[#39FF14] rounded-full flex items-center justify-center 
-               overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[230px]"
+               overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[180px]"
   >
     {/* '>' fades out on hover (only on lg) */}
     <span className="hidden lg:block absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
