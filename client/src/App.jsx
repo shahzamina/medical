@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css'
 import Home from './components/Home';
-import Card from './components/card';
+import Card from './components/Card';
 
 import { FaInstagram } from "react-icons/fa";
 import Footer from './components/Footer';
