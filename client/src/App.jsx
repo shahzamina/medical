@@ -92,7 +92,7 @@ import Mripro from './components/Mripro';
 import Ultrapro from './components/Ultrapro';
 import Xraypro from './components/Xraypro';
 import Xctpro from './components/Xctpro';
-import Equip from './components/Equip';
+
 
 import Services from './components/Services';
 import About from './components/About';
@@ -202,7 +202,7 @@ function App() {
 <Route path='ultrapro' element={<Ultrapro />}  />
 <Route path='xrypro' element={<Xraypro />}  />
 <Route path='xctpro' element={<Xctpro />}  />
-<Route path='equip' element={<Equip />}  />
+
 <Route path='sign' element={<Sign />}  />
 <Route path='ser' element={<Services />}  />
 <Route path='about' element={<About />}  />
