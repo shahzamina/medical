@@ -33,8 +33,8 @@ const Navbar = () => {
       `}>
       <Link to='/'>
   <img
-    className='w-40 sm:w-28 md:w-64 lg:w-64 h-40 mt-5 ml-4 sm:ml-4 md:ml-6 pl-2 sm:pl-4 md:pl-3 pb-12'
-    src={isScrolled ? "/images/inf.png" : "/images/inf.png"}
+    className='w-40 sm:w-28 md:w-64 lg:w-80 h-40 mt-5 ml-4 sm:ml-4 md:ml-6 pl-2 sm:pl-4 md:pl-3 pb-12'
+    src={isScrolled ? "/images/chat1.png" : "/images/inf123.png"}
     alt="Logo"
   />
 </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
  </button>
 
  
-      <ul className='mr-4 mt-3  hidden lg:flex lg:flex-row  justify-right ml-180 md:ml-100 lg:ml-140 w-full gap-6 p-2'>
+      <ul className='mr-4 mt-3  hidden lg:flex lg:flex-row  justify-right ml-160 md:ml-80 lg:ml-120 w-full gap-6 p-2'>
 <li className='relative group  mt-1'><button className={`mb-0 font-bold text-lg border-b-2 border-transparent cursor-pointer transition-all duration-300  inline-block  ${isScrolled
         ? 'text-black hover:text-gray-700 hover:border-black'
         : 'text-white hover:text-gray-200 hover:border-white'

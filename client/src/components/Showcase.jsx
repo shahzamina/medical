@@ -7,6 +7,7 @@ const Showcase = ({content=[]}) => {
 
   return (
     <div className="w-full flex flex-col gap-2 py-12 px-6 md:px-16 bg-[#f9f9f9] mt-5">
+     
       {content.map((item, index) => (
         <div
           key={index}

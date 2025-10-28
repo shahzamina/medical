@@ -55,6 +55,7 @@ const Rental = () => {
   }),
 };
 
+
    const onSubmit = async (data) => {
      const rentalData = {
     ...data,

@@ -32,9 +32,16 @@ const Services = () => {
      
     },
      {
-      heading: "Helium Filling Kits",
+      heading: "Helium Filling Kit",
       paragraph: "The Helium Filling Kit is a specialized service tool designed to simplify helium refill operations while reducing potential risks and ensuring safe, efficient handling. ",
       img: "/images/r5.jpeg",
+      btn: "Request A Service Quote",
+     
+    },
+     {
+      heading: "RTI kV/mA Meters",
+      paragraph: "The Piranha MULTI X-ray meter provides a complete solution for precise diagnostics and quality assurance across Radiography/Fluoroscopy, CT and Mammography systems. It accurately measures kVp, exposure time, HVL, total filtration, dose, dose rate, and displays waveforms—offering comprehensive performance evaluation in one device. ",
+      img: "/images/r6.png",
       btn: "Request A Service Quote",
      
     },
@@ -48,32 +55,11 @@ const Services = () => {
 
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
-  <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
+  <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/50 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
     <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">Rental Services</h1>
-    <p  className="mt-4  text-white text-left px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">We provide flexible MRI rental services for smooth and reliable operations.  </p>
+    <p  className="mt-4  text-white text-left px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">We provide flexible MRI rental services for smooth and reliable operations. </p>
     
- {/*<Link
-      
-       style={{ textDecoration: "none" }}
-       className="relative inline-flex items-center justify-center text-[#39FF14] font-semibold group mt-4"
-     >
-  
-       <span
-         className="absolute left-0 w-10 h-10 border-2 p-4 ml-12 border-[#39FF14] rounded-full flex items-center justify-center 
-                    overflow-hidden transition-all duration-700 ease-in-out group-hover:w-[330px]"
-       >
-     
-         <span className="absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
-           &gt;
-         </span>
-       </span>
-     
-      
-       <span className="relative text-lg text-white pl-16 pr-240 transition-all duration-700 ease-in-out">
-  REQUEST A PART/Get A Quote
-       </span>
-     </Link>*/}
-    
+
  
 
   </div>
@@ -83,8 +69,9 @@ const Services = () => {
     <div className='mt-16'>
      
 
-<p className='px-20 pb-4 text-lg text-justify'>We are proud to be equipped with a complete range of advanced tools and equipment, including Multivendor Magnet Power Supplies (GE, Siemens, Philips, Toshiba), Coldhead Replacement Kits, Helium Filling Kits, MRI-Compatible Tools, and RTI kV/mA Meters. These specialized instruments enable us to maintain and operate radiology systems at their highest efficiency, ensuring consistent performance and dependable scan quality.</p>
-<p className='text-left px-20'>We also provide these tools on a rental basis, such as:</p>
+<p className='px-10 lg:px-64 pb-4 text-lg text-justify'>We are proud to be equipped with a complete range of advanced tools and equipment, including Multivendor Magnet Power Supplies (GE, Siemens, Philips, Toshiba), Coldhead Replacement Kits, Helium Filling Kits, MRI-Compatible Tools, and RTI kV/mA Meters. These specialized instruments enable us to maintain and operate radiology systems at their highest efficiency, ensuring consistent performance and dependable scan quality. </p>
+<p className='text-left px-64 text-lg'> We also provide these tools on a rental basis, such as: </p>
+
 
 <Showcase content={content}  />
     </div>

@@ -10,6 +10,7 @@ app.use(express.json())
 
 const connectDb=require('./db.cjs')
 connectDb()
+console.log('db connected')
 const PORT=process.env.PORT ||5000
 const Route=require('./routes/userroute.cjs')
 
