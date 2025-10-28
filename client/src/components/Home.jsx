@@ -10,9 +10,9 @@ import Card from './Card'
 const Home = () => {
   const[image,setimage]=useState(0)
     const card=[
-        {img:'/images/part.png',h:'PARTS',link:'/allpro',btn:'Shop Parts'},
+        {img:'/images/par.png',h:'Parts',link:'/allpro',btn:'Shop Parts'},
         
-        {img:'/images/ss.png',h:'Service',link:'/ser',btn:'Get Rental Services'},
+        {img:'/images/ren.png',h:'Service',link:'/ser',btn:'Get Rental Services'},
     ]
 
     const images=[
@@ -74,10 +74,10 @@ const Home = () => {
           {/* Gradient overlay */}
          <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-center justify-center sm:pb-10 pb-10 lg:pt-10">
 
-            <h1 className="text-white md:!text-6xl sm:!font-normal lg:font-bold px-5 sm:px-10">
+            <h1 className="text-white text-left md:!text-6xl sm:!font-normal lg:font-bold px-5 sm:px-10">
               Your Medical Imaging Equipment Partner
             </h1>
-            <p className="text-white px-6 lg:text-4xl lg:font-bold mt-4">
+            <p className="text-white text-left px-12  lg:text-4xl lg:font-bold mt-4">
               We help you Buy, Sell, and Service Imaging Equipment.
             </p>
           </div>
@@ -106,8 +106,8 @@ const Home = () => {
 >
   {/* Expanding circle */}
   <span
-    className="absolute left-0 w-40 sm:w-10 h-10 border-2 p-4 border-[#39FF14] rounded-full flex items-center justify-center 
-               overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[180px]"
+    className="ml-3 absolute left-0 w-40 sm:w-10 h-10 border-2 p-4 border-[#39FF14] rounded-full flex items-center justify-center 
+               overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[213px]"
   >
     {/* '>' fades out on hover (only on lg) */}
     <span className="hidden lg:block absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
@@ -121,7 +121,7 @@ const Home = () => {
   </span>
 
   {/* Text outside circle for large screens */}
-  <span className="hidden sm:inline-block relative text-lg text-black pl-16 pr-4 transition-all duration-700 ease-in-out">
+  <span className="hidden sm:inline-block relative ml-3 text-lg text-black  pl-14 pr-10 transition-all duration-700 ease-in-out">
     {v.btn}
   </span>
 </Link>

@@ -7,15 +7,14 @@ const Allpro = () => {
   const h1='Radiology Equipment Parts '
   const p1='Explore our wide range of parts, we’ll assit you in finding the ideal used part for your equipment'
  
-const img='/images/angio.jpg'
+const img='/images/home1.jpeg'
 const p='High-Quality Replacement Parts for Every Modality'
 const partStyle = {
  marginLeft:'10px',
   color: 'black',              // text color: black
   fontSize: '2rem',      // roughly text-xl (20px)
   fontWeight: '700',          // medium weight for a clean look
-  textAlign: 'left',          // aligns text to the left
-          // adds nice spacing between lines
+  textAlign: 'left',          
 };
 
       const part = [

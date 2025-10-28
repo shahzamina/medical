@@ -8,6 +8,8 @@ const Rental = () => {
   const customStyles = {
   control: (base, state) => ({
     ...base,
+
+    
     border: `2px solid ${state.isFocused ? "#1E90FF" : "#0046A0"}`,
     boxShadow: state.isFocused ? "0 0 4px rgba(30,144,255,0.4)" : "none",
     backgroundColor: "white",
@@ -21,6 +23,7 @@ const Rental = () => {
     ...base,
     color: "#4A76C9",
     fontStyle: "italic",
+    padding:'20px'
   }),
   singleValue: (base) => ({ ...base, color: "#0046A0" }),
   menu: (base) => ({
@@ -95,12 +98,13 @@ const Rental = () => {
       />
 </div>
      
-    <div className="grid grid-cols-2 gap-4">
+   <div className="grid grid-cols-2 gap-4">
         <input
           {...register("phoneNumber")}
           placeholder="Phone Number"
             className="bg-white border-2 border-[#0046A0] rounded-lg p-3 focus:border-[#1E90FF] outline-none placeholder:text-[#0046A0]"
         />
+
       <div>
   <Controller
     name="rentalService"
@@ -122,7 +126,6 @@ const Rental = () => {
     )}
   />
 </div>
-
 </div>
 
 

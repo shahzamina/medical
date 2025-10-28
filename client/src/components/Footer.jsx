@@ -67,7 +67,7 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-      <p className='text-left ml-28 text-black'>© 2025 Block Imaging, Inc. | 1845 Cedar St. Holt MI 48842</p>
+      <p className='text-left ml-28 text-black'>© 2025 Infinity Global, Inc. | 1845 Cedar St. Holt MI 48842</p>
     </div>
 
   </div>
