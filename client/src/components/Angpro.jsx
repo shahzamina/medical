@@ -12,7 +12,7 @@ const Angpro = () => {
       const part = [
           { img:'/images/angio21.jpg', p:'5329772 Rev 1 - GE Healthcare - Angiography - Rotation V3 Board ',link:'/angio'},
           { img:'/images/angio2.jpg', p:'2337735-2-6 - GE Healthcare - Angiography- FCIB V2 Board', link:'/angiof'},
-        
+         { img:'/images/angio1.jpg', p:'2337735-2-6 - GE Healthcare - Angiography- FCIB V2 Board', link:'/angiof'},
         ];
   return (
     <div>

@@ -11,18 +11,21 @@ const Showcase = ({content=[]}) => {
         <div key={idx} className=" max-w-7xl mx-5 pb-5">
           {/* Heading Centered */}
           <h2 className="text-3xl font-bold text-center my-4 text-[#0046A0]">{item.heading}</h2>
- <p className="text-lg text-center text-gray-700">{item.paragraph}</p>
+ <p className="text-lg text-left text-gray-700">{item.paragraph}</p>
           {/* Content Row */}
           
             {/* Image Left */}
-            <div className="w-full lg:w-300 mt-3">
-              <img
-                src={item.img}
-                alt={item.heading}
-                className="w-full h-130 mt-5 shadow-lg object-cover"
-              />
+           <div className="w-full mt-3">
+<div className="w-[1200px] h-[400px] mt-3 overflow-hidden">
+  <img
+    src={item.img}
+    alt={item.heading}
+    className="w-full h-full object-contain"
+  />
+</div>
+
              <button
-                onClick={() => navigate('/sign')}
+                onClick={() => navigate('/rental')}
                 className="relative inline-flex items-center justify-center font-semibold group mt-5 pt-6"
               >
                 {/* Expanding circle */}

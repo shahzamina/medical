@@ -22,6 +22,8 @@ const Navbar = () => {
       // cleanup
       return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    
   return (
     <div>
       <nav className={`fixed top-0 left-0  w-full sm:w-full  lg:w-full z-50 flex flex-row justify-between items-center
@@ -76,12 +78,12 @@ const Navbar = () => {
   <Link to='/mripro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>MRI</li></Link>
   <Link to='/ctpro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CT Scan</li></Link>
   <Link to='/xrypro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>X-Ray</li></Link>
-  <Link to='/ultrapro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>ULTRASOUND</li></Link>
-  <Link to='/mampro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>MAMOGRAPHY</li></Link>
-  <Link to='/fluopro'><li className='inline-block text-sm text-left text-[#0046A0]/90  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  px-3 py-3 cursor-pointer w-full'>FLUOROSCOPY</li></Link>
-  <Link to='/gampro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>GAMMA CAMERA</li></Link>
-<Link to='/angpro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>ANGIOGRAPHY</li></Link>
-<Link to='/crpro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CR</li></Link>
+  <Link to='/ultrapro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Ultrasound</li></Link>
+  <Link to='/mampro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Mamography</li></Link>
+  <Link to='/fluopro'><li className='inline-block text-sm text-left text-[#0046A0]/90  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  px-3 py-3 cursor-pointer w-full'>Fluoroscopy</li></Link>
+  <Link to='/gampro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Gama Camera</li></Link>
+<Link to='/angpro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Angiography</li></Link>
+<Link to='/crpro'><li className='inline-block text-sm text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CR System</li></Link>
 
 
 

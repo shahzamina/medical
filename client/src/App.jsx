@@ -98,6 +98,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Sign from './components/Sign';
 import Showcase from './components/Showcase';
+import Rental from './components/Rental';
 function App() {
 
   return (
@@ -206,6 +207,7 @@ function App() {
 <Route path='ser' element={<Services />}  />
 <Route path='about' element={<About />}  />
 <Route path='show' element={<Showcase />}  />
+<Route path='rental' element={<Rental />}  />
 </Routes>
   <Navbar  />
 <Footer  />

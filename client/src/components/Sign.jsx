@@ -133,7 +133,8 @@ const customStyles = {
 };
 
 const Sign = () => {
-  const { register, handleSubmit, control, setValue, watch } = useForm();
+  const { register, handleSubmit, control, setValue, watch,reset,formState:{isValid}  } = useForm({mode:'onChange'})
+
   
 const parsedData = useMemo(() => {
   return part
@@ -162,7 +163,28 @@ const modalities = useMemo(() => {
   );
 }, [parsedData]);
 
-  const onSubmit = (data) => console.log("Submitted Data:", data);
+   const onSubmit = async (data) => {
+    console.log('data',data)
+    try {
+      const res = await fetch('http://localhost:5000/form', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+
+      if (res.ok) {
+           alert(result.message);
+        reset(); 
+      } else {
+ 
+        alert(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      alert("Server error — please try again later.");
+    }
+  };
+
 
   return (
 
@@ -291,7 +313,7 @@ const modalities = useMemo(() => {
 
       <textarea
         {...register("partDescription")}
-        placeholder="Part Description / Comment"
+        placeholder="Comment"
         rows="3"
         className="bg-white mt-3 border-2 border-[#0046A0] rounded-lg p-3 focus:border-[#1E90FF] outline-none w-full placeholder:text-[#0046A0]"
       />

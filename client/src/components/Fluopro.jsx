@@ -11,7 +11,9 @@ const Fluopro = () => {
   const p=' Fluoroscopy'
       const part = [
          
+         
           {img:'/images/fluro1.jpg', p:'0 925 - GE Hewalthcare - Fluoroscopy - R & F Backplane Board - 46-264064G3-A', link:'/fluoro'},
+        {img:'/images/fluro2.jpg', p:'0 925 - GE Hewalthcare - Fluoroscopy - R & F Backplane Board - 46-264064G3-A', link:'/fluoro'},
         
          
         ];

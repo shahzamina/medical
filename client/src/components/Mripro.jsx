@@ -11,8 +11,10 @@ const Mripro = () => {
       const part = [
         
          
-          {img:'/images/mri1.jpg', p:'6250034 - GE Healthcare - MRI - IXG Board  - 6250035 REV 2', link:'/mri'},
+           {img:'/images/mri1.jpg', p:'6250034 - GE Healthcare - MRI - IXG Board  - 6250035 REV 2', link:'/mri'},
           {img:'/images/mri21.jpg', p:'85851328 - HITACHI - MRI - PCB SBS Fiber Optic Board ', link:'/mripcb'},
+{img:'/images/mri22.jpg', p:'85851328 - HITACHI - MRI - PCB SBS Fiber Optic Board ', link:'/mripcb'},
+
         
         ];
   return (

@@ -10,7 +10,7 @@ const Equip = () => {
   { link:'/fluopro', img: '/images/ff.png', name: 'Fluoroscopy' },
   { link:'/gampro', img: '/images/cttt.png', name: 'Gamma Camera' },
   { link:'/angpro', img: '/images/aa.png', name: 'Angiography' },
-    { link:'/crpro', img: '/images/crr.png', name: 'CR' },
+    { link:'/crpro', img: '/images/crr.png', name: 'CR System' },
 ];
   return (
     <div>
@@ -20,31 +20,11 @@ const Equip = () => {
               backgroundPosition:'center'
       
             }}
-            className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[650px]">
+            className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[500px]">
         <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
           <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">Medical Imaging Equipment</h1>
-          <p  className="mt-4  text-white text-left  lg:px-12 lg:text-xl font-normal ">We carry CT, MRI, PET/CT, C-arm, Cath labs, X-rays, Mammo, and Ultrasound from major providers like Siemens, GE, Philips, Toshiba, Neusoft, Halogic, and more. </p>
-     <Link
-      
-       style={{ textDecoration: "none" }}
-       className="relative inline-flex items-center justify-center text-[#39FF14] font-semibold group mt-4"
-     >
-       {/* Expanding circle */}
-       <span
-         className="absolute left-0 w-10 h-10 border-2 p-4 ml-12 border-[#39FF14] rounded-full flex items-center justify-center 
-                    overflow-hidden transition-all duration-700 ease-in-out group-hover:w-[230px]"
-       >
-         {/* '>' fades out on hover */}
-         <span className="absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
-           &gt;
-         </span>
-       </span>
-     
-       {/* Text (stays same) */}
-       <span className="relative text-lg text-white pl-16 pr-260 transition-all duration-700 ease-in-out">
-      Equipment Quote
-       </span>
-     </Link>
+          <p  className="mt-4  text-white text-left  sm:px-20 px-12 lg:px-12 lg:text-xl font-normal ">We carry CT, MRI, PET/CT, C-arm, Cath labs, X-rays, Mammo, and Ultrasound from major providers like Siemens, GE, Philips, Toshiba, Neusoft, Halogic, and more. </p>
+   
 
         </div>
       

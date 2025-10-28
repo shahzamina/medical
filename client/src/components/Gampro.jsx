@@ -12,7 +12,8 @@ const Gampro = () => {
        
       
         
-          {img:'/images/gama1.jpg', p:'552000448 - SCHLEIFRING - Gamma Camera - Slip Ring Board', link:'/gamacam'},
+           {img:'/images/gama1.jpg', p:'552000448 - SCHLEIFRING - Gamma Camera - Slip Ring Board', link:'/gamacam'},
+        {img:'/images/gama2.jpg', p:'552000448 - SCHLEIFRING - Gamma Camera - Slip Ring Board', link:'/gamacam'},
         
          
         ];

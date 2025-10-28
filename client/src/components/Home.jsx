@@ -12,7 +12,7 @@ const Home = () => {
     const card=[
         {img:'/images/part.png',h:'PARTS',link:'/allpro',btn:'Shop Parts'},
         
-        {img:'/images/ss.png',h:'Service',link:'/ser',btn:'Get Services'},
+        {img:'/images/ss.png',h:'Service',link:'/ser',btn:'Get Rental Services'},
     ]
 
     const images=[
@@ -84,20 +84,20 @@ const Home = () => {
         </div>
 
         {/* Cards */}
-        <div className=" mb-0 relative bottom-30 z-10 h-auto flex flex-col sm:flex-row gap-4 px-4 sm:px-8 md:px-22 justify-center">
+        <div className="relative bottom-14 z-10 h-auto flex flex-col sm:flex-row gap-4 px-4 sm:px-8 md:px-22 justify-center">
           {card.map((v) => (
             <div
               key={v._id}
-              className="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] bg-white pb-5 shadow-lg rounded-sm flex flex-col items-center text-center"
+              className="w-auto sm:w-[80%] md:w-[45%] lg:w-[30%] bg-white pb-5 shadow-lg rounded-sm flex flex-col items-center text-center"
             >
               <img
-                className="mx-auto h-49 w-auto object-contain mt-4
+                className="mx-auto h-20 w-32 object-contain mt-4
                  transition-transform duration-300 ease-in-out 
              hover:scale-105 hover:cursor-pointer"
                 src={v.img}
                 alt={v.p}
               />
-              <h2 className="font-bold text-gray-700 pt-6">{v.h}</h2>
+              <h2 className="w-64 font-bold text-gray-700 pt-6">{v.h}</h2>
           <div className="mr-38 lg:mr-0">   
 <Link
   to={v.link}
