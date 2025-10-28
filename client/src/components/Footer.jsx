@@ -33,7 +33,7 @@ const Footer = () => {
 
     <div className='flex flex-col items-center md:flex-row md:justify-between px-5'>
       <div className='hidden md:block'> 
-        <Link><img className=' w-40 ml-18' src="/images/123.png" alt="" /></Link>
+        <Link><img className=' w-40 ml-18' src="/images/inf123.png" alt="" /></Link>
       </div>
 
       <div className='flex gap-4 justify-center md:justify-end lg:mr-50 sm:mt-3 md:mt-0'>

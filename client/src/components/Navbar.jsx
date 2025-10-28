@@ -34,7 +34,7 @@ const Navbar = () => {
       <Link to='/'>
   <img
     className='w-40 sm:w-28 md:w-64 lg:w-80 h-40 mt-5 ml-4 sm:ml-4 md:ml-6 pl-2 sm:pl-4 md:pl-3 pb-12'
-    src={isScrolled ? "/images/chat1.png" : "/images/inf123.png"}
+    src={isScrolled ? "/images/inf123.png" : "/images/inf123.png"}
     alt="Logo"
   />
 </Link>
