@@ -1,6 +1,7 @@
 import React from 'react'
 import Parts from './Parts';
 import { Link } from 'react-router-dom'
+import Othparts from './Othparts';
 
 const Ultrapro = () => {
   const h1='High-Performance Ultrasound Systems for Accurate Real-Time Imaging'
@@ -16,7 +17,7 @@ const Ultrapro = () => {
         ];
   return (
     <div>
-     <Parts h1={h1} p1={p1}  h2={h2} p={p}  img={img} part={part} />
+     <Othparts h1={h1} p1={p1}  h2={h2} p={p}  img={img} part={part} />
     </div>
   )
 }

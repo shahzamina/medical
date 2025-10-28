@@ -1,6 +1,7 @@
 import React from 'react'
 import Parts from './Parts';
 import { Link } from 'react-router-dom'
+import Othparts from './Othparts';
 
 const Mampro = () => {
    const h1='High-Definition Mammography Systems for Confident Breast Imaging'
@@ -26,7 +27,7 @@ const Mampro = () => {
         ];
   return (
     <div>
-    <Parts h1={h1} p1={p1}  h2={h2} p={p}  img={img} part={part} />
+    <Othparts h1={h1} p1={p1}  h2={h2} p={p}  img={img} part={part} />
     </div>
   )
 }

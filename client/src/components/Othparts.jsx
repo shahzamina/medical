@@ -3,19 +3,13 @@ import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CreatableSelect from 'react-select/creatable';
 
-const Parts = ({part=[],h1,p1,img,h2,p,style}) => {
+const Othparts = ({part=[],h1,p1,img,h2,p,style}) => {
     const [selectedManufacturer, setSelectedManufacturer] = useState(null);
   const [selectedModality, setSelectedModality] = useState(null);
 
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9; // you can change this to 6, 9, etc.
-
-
- 
-    
-  
-
 
   const parsedData = useMemo(() =>
     part.map(item => {
@@ -201,78 +195,7 @@ dropdownIndicator: (base) => ({
 </div>
 
 
-{/* Modality Select */}
-<div className="w-64 mt-1">
-  <CreatableSelect
-    placeholder="Select Modality..."
-    options={modalities}
-    value={selectedModality}
-    onChange={setSelectedModality}
-    isDisabled={!selectedManufacturer} // disabled until manufacturer selected
-    isClearable
-    isSearchable={false}
-    isValidNewOption={() => false}
-    formatCreateLabel={() => null}
-    styles={{
-      control: (base, state) => ({
-        ...base,
-        border: `2px solid ${state.isFocused ? '#1E90FF' : '#0046A0'}`, // blue border
-        boxShadow: state.isFocused
-          ? '0 0 4px rgba(30,144,255,0.4)' // soft glow when focused
-          : 'none',
-        backgroundColor: 'white',
-        color: '#0046A0',
-        borderRadius: '12px',
-        transition: 'all 0.3s ease',
-        cursor: !selectedManufacturer ? 'not-allowed' : 'pointer',
-        opacity: !selectedManufacturer ? 0.6 : 1,
-        '&:hover': {
-          borderColor: '#1E90FF',
-        },
-      }),
-      input: (base) => ({ ...base, color: '#0046A0' }),
-      placeholder: (base) => ({
-        ...base,
-        color: '#4A76C9',
-        fontStyle: 'italic',
-      }),
-      singleValue: (base) => ({ ...base, color: '#0046A0' }),
-      menu: (base) => ({
-        ...base,
-        background: 'white',
-        borderRadius: 0,
-        marginTop: 2,
-        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-      }),
-      option: (base, state) => ({
-        ...base,
-        textAlign: 'left',
-        padding: '12px 14px',
-        background: state.isFocused
-          ? 'linear-gradient(to right, #00BFFF, #1E90FF, #104E8B)'
-          : 'transparent',
-        color: state.isFocused ? 'white' : '#0046A0',
-        cursor: 'pointer',
-        transition: 'all 0.3s ease',
-        '&:last-child': { borderBottom: 'none' },
-        '&:active': {
-          background: 'linear-gradient(to right, #009ACD, #0077AA)',
-          color: 'white',
-        },
-      }),
-      clearIndicator: (base) => ({
-        ...base,
-        color: '#1E90FF', // solid blue always
-        '&:hover': { color: '#0077AA' },
-      }),
-      dropdownIndicator: (base) => ({
-        ...base,
-        color: '#1E90FF', // solid blue arrow
-        '&:hover': { color: '#0077AA' },
-      }),
-    }}
-  />
-</div>
+
 
 
   </div>
@@ -344,4 +267,4 @@ dropdownIndicator: (base) => ({
   )
 }
 
-export default Parts
+export default Othparts

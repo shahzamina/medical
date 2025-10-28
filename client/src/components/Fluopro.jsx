@@ -2,6 +2,7 @@ import React from 'react'
 import Parts from './Parts';
 import { Link } from 'react-router-dom'
 import Fluoro from './Fluoro';
+import Othparts from './Othparts';
 
 const Fluopro = () => {
   const h1='Advanced Fluoroscopy Systems for Real-Time Imaging Precision'
@@ -19,7 +20,7 @@ const Fluopro = () => {
         ];
   return (
     <div>
-      <Parts h1={h1} p1={p1} h2={h2} p={p}  img={img} part={part} />
+      <Othparts h1={h1} p1={p1} h2={h2} p={p}  img={img} part={part} />
     </div>
   )
 }

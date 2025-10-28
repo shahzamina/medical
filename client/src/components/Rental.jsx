@@ -3,7 +3,7 @@ import { useForm, Controller } from "react-hook-form";
 import CreatableSelect from "react-select/creatable";
 
 const Rental = () => {
-  const { register, handleSubmit, control, setValue, watch } = useForm();
+  const { register, handleSubmit, control, setValue, watch,reset } = useForm();
 
   const customStyles = {
   control: (base, state) => ({
@@ -21,9 +21,8 @@ const Rental = () => {
   input: (base) => ({ ...base, color: "#0046A0" }),
   placeholder: (base) => ({
     ...base,
-    color: "#4A76C9",
-    fontStyle: "italic",
-    padding:'20px'
+    color: "#0046A0",
+     padding:'20px'
   }),
   singleValue: (base) => ({ ...base, color: "#0046A0" }),
   menu: (base) => ({
@@ -56,7 +55,36 @@ const Rental = () => {
   }),
 };
 
-    const onSubmit = (data) => console.log("Submitted Data:", data);
+   const onSubmit = async (data) => {
+     const rentalData = {
+    ...data,
+    rentalService: data.rentalService?.value || "", // 👈 only keep the text
+  };
+
+    console.log('data',data)
+    console.log('rentalData',rentalData)
+    try {
+      const res = await fetch('http://localhost:5000/rental', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(rentalData),
+      });
+      const result = await res.json();
+
+      if (res.ok) {
+           alert(result.message);
+        reset(); 
+      } else {
+ 
+        alert(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      alert("Server error — please try again later.");
+    }
+  };
+
+  
+        
   return (
     <>
   <div className=' bg-gray-300 h-24'>

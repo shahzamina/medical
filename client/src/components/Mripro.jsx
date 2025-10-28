@@ -1,6 +1,7 @@
 import React from 'react'
 import Parts from './Parts';
 import { Link } from 'react-router-dom'
+import Othparts from './Othparts';
 
 const Mripro = () => {
   const h1='Advanced MRI Systems for Superior Diagnostic Precision'
@@ -19,7 +20,7 @@ const Mripro = () => {
         ];
   return (
     <div>
-       <Parts h1={h1} p1={p1} h2={h2} p={p}   img={img} part={part} />
+       <Othparts h1={h1} p1={p1} h2={h2} p={p}   img={img} part={part} />
     </div>
   )
 }

@@ -6,27 +6,37 @@ const Showcase = ({content=[]}) => {
  
 
   return (
-    <div className="w-full py-10 px-6">
-      {content.map((item, idx) => (
-        <div key={idx} className=" max-w-7xl mx-5 pb-5">
-          {/* Heading Centered */}
-          <h2 className="text-3xl font-bold text-center my-4 text-[#0046A0]">{item.heading}</h2>
- <p className="text-lg text-left text-gray-700">{item.paragraph}</p>
-          {/* Content Row */}
+    <div className="w-full flex flex-col gap-2 py-12 px-6 md:px-16 bg-[#f9f9f9] mt-5">
+      {content.map((item, index) => (
+        <div
+          key={index}
+          className={`flex flex-col md:flex-row items-center gap-5 mt-5 mb-3 ${
+            index % 2 !== 0 ? "md:flex-row-reverse" : ""
+          }`}
+        >
           
-            {/* Image Left */}
-           <div className="w-full mt-3">
-<div className="w-[1200px] h-[400px] mt-3 overflow-hidden">
-  <img
-    src={item.img}
-    alt={item.heading}
-    className="w-full h-full object-contain"
-  />
-</div>
+          {/* Left: Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+            style={{
+    boxShadow: " 0 0 15px #001F3F"
+  }}
+              src={item.img}
+              alt={item.heading}
+              className="w-full md:w-[90%] h-128 md:h-80 object-contain rounded-2xl"
+            />
+          </div>
 
-             <button
+          {/* Right: Text */}
+          <div className="w-full md:w-1/2 space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#001A4D]">
+              {item.heading}
+            </h2>
+            <p className="text-gray-700 leading-relaxed mt-3 ">{item.paragraph}</p>
+            
+               <button
                 onClick={() => navigate('/rental')}
-                className="relative inline-flex items-center justify-center font-semibold group mt-5 pt-6"
+                className="relative inline-flex items-center justify-center font-semibold group mt-1 pt-6"
               >
                 {/* Expanding circle */}
                 <span
@@ -45,14 +55,8 @@ const Showcase = ({content=[]}) => {
                   {item.btn}
                 </span>
               </button>
-
-            {/* Paragraph + Button Right */}
-            
-             
-           
-            </div>
           </div>
-       
+        </div>
       ))}
     </div>
   );

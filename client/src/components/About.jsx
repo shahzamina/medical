@@ -27,7 +27,7 @@ const About = () => {
               backgroundPosition:'center'
       
             }}
-            className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[500px]">
+            className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
           <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">   EXPLORE INFINITY GLOBAL </h1>
           <p  className="mt-4  text-white text-left px-12 sm:px-14 lg:px-12 lg:text-xl font-normal ">Leading Supplier of Radiology Equipment Parts</p>
@@ -37,7 +37,7 @@ const About = () => {
         </div>
       
           </div>
-          <p className='px-20 text-xl text-justify text-gray-600 mt-5'>We are Infinity Global, deeply committed to empowering the healthcare sector worldwide. As a trusted supplier, we deliver top-tier, high-quality parts for all major radiology modalities—MRI, CT Scan, X-ray, Ultrasound, Mammography, Angiography, Fluoroscopy, DR & CR Systems.
+          <p className='px-20 text-xl text-justify text-gray-600 mt-5'>We are Infinity Global, deeply committed to empowering the healthcare sector worldwide. As a trusted supplier, we deliver top-tier, high-quality parts for all major radiology modalities—MRI, CT Scan, Digital X-Ray, Ultrasound, Mammography, Angiography, Fluoroscopy, DR & CR Systems.
 We ensure your radiology equipment operates at peak performance with reliable parts and expert support.
 </p>
 

@@ -6,51 +6,84 @@ const Services = () => {
     {
       heading: "Multivendor Magnet Power Supply",
       paragraph: "As the first universal power supply compatible with leading MRI brands such as Siemens, Philips, GE, and Canon, it simplifies operations by combining multiple ramp tools into one versatile unit. ",
-      img: "/images/ren1.png",
+      img: "/images/r1.jpeg",
       btn: "Request A Service Quote",
      
     },
      {
       heading: "Coldhead Replacement Kit",
       paragraph: "The GE Coldhead Change Kit offers a comprehensive and easy-to-use solution for replacing coldheads on GE magnets. Designed with premium components and advanced functionality, it ensures a safe, seamless, and efficient replacement process. ",
-      img: "/images/ren2.png",
+      img: "/images/r2.jpeg",
       btn: "Request A Service Quote",
      
     },
      {
       heading: "Coldhead Maintenance Kit",
       paragraph: "The Philips Coldhead Service Kit provides a comprehensive and effective solution for maintaining IGC magnets. Equipped with advanced features and all essential tools, it enables smooth, dependable, and professional coldhead servicing. ",
-      img: "/images/ren3.png",
+      img: "/images/r3.jpg",
       btn: "Request A Service Quote",
      
     },
      {
       heading: "MRI-Compatible Tools",
       paragraph: "We provide customizable nonmagnetic service tool kits crafted from beryllium, copper, or titanium—engineered to deliver exceptional durability, performance, and safety within MRI environments. ",
-      img: "/images/ren4.png",
+      img: "/images/r4.jpg",
       btn: "Request A Service Quote",
      
     },
      {
       heading: "Helium Filling Kits",
       paragraph: "The Helium Filling Kit is a specialized service tool designed to simplify helium refill operations while reducing potential risks and ensuring safe, efficient handling. ",
-      img: "/images/ren5.png",
+      img: "/images/r5.jpeg",
       btn: "Request A Service Quote",
      
     },
   ];
   return (
     <>
-<div className='bg-gray-300 h-26'>
+      <div style={{ backgroundImage: "url('/images/ren1.jpeg')",
+        backgroundRepeat:'no-repeat',
+        backgroundSize:'cover',
+        backgroundPosition:'center'
 
-</div>
+      }}
+      className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
+  <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
+    <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">Rental Services</h1>
+    <p  className="mt-4  text-white text-left px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">We provide flexible MRI rental services for smooth and reliable operations.  </p>
+    
+ {/*<Link
+      
+       style={{ textDecoration: "none" }}
+       className="relative inline-flex items-center justify-center text-[#39FF14] font-semibold group mt-4"
+     >
+  
+       <span
+         className="absolute left-0 w-10 h-10 border-2 p-4 ml-12 border-[#39FF14] rounded-full flex items-center justify-center 
+                    overflow-hidden transition-all duration-700 ease-in-out group-hover:w-[330px]"
+       >
+     
+         <span className="absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
+           &gt;
+         </span>
+       </span>
+     
+      
+       <span className="relative text-lg text-white pl-16 pr-240 transition-all duration-700 ease-in-out">
+  REQUEST A PART/Get A Quote
+       </span>
+     </Link>*/}
+    
+ 
+
+  </div>
+
+    </div>
+
     <div className='mt-16'>
-     <h1>Rental Services</h1>
-<p className='pt-4 px-20 pb-4 text-xl text-left'>We provide flexible MRI rental services for smooth and reliable operations.</p>
+     
 
-<p className='px-20 pb-4 text-lg text-left'>We are proud to be equipped with a complete range of advanced tools and equipment, including Multivendor Magnet Power Supplies (GE, Siemens, Philips, Toshiba), Coldhead Replacement Kits, Helium Filling Kits, MRI-Compatible Tools, and RTI kV/mA Meters.</p>
-
-<p className='text-left px-20'>These specialized instruments enable us to maintain and operate radiology systems at their highest efficiency, ensuring consistent performance and dependable scan quality.</p>
+<p className='px-20 pb-4 text-lg text-justify'>We are proud to be equipped with a complete range of advanced tools and equipment, including Multivendor Magnet Power Supplies (GE, Siemens, Philips, Toshiba), Coldhead Replacement Kits, Helium Filling Kits, MRI-Compatible Tools, and RTI kV/mA Meters. These specialized instruments enable us to maintain and operate radiology systems at their highest efficiency, ensuring consistent performance and dependable scan quality.</p>
 <p className='text-left px-20'>We also provide these tools on a rental basis, such as:</p>
 
 <Showcase content={content}  />

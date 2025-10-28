@@ -1,6 +1,7 @@
 import React from 'react'
 import Parts from './Parts';
 import { Link } from 'react-router-dom'
+import Othparts from './Othparts';
 
 const Crpro = () => {
 const h1='Advanced Computed Radiography Solutions for Reliable Digital Imaging'
@@ -20,7 +21,7 @@ const p1='Upgrade your imaging workflow with dependable CR technology designed f
         ];
   return (
     <div>
-     <Parts h1={h1} p1={p1} h2={h2} p={p} img={img} part={part} />
+     <Othparts h1={h1} p1={p1} h2={h2} p={p} img={img} part={part} />
     </div>
   )
 }
