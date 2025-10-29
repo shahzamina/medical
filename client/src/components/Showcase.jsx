@@ -30,32 +30,42 @@ const Showcase = ({content=[]}) => {
 
           {/* Right: Text */}
           <div className="w-full md:w-1/2 space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#001A4D]">
+            <h2 className="text-2xl text-left md:text-3xl font-bold text-[#001A4D]">
               {item.heading}
             </h2>
-            <p className="text-gray-700 leading-relaxed mt-3 ">{item.paragraph}</p>
+            <p className="text-gray-700 leading-relaxed mt-3 text-left ">{item.paragraph}</p>
             
-               <button
-                onClick={() => navigate('/rental')}
-                className="relative inline-flex items-center justify-center font-semibold group mt-1 pt-6"
-              >
-                {/* Expanding circle */}
-                <span
-                  className="absolute left-0 w-40 sm:w-10 h-10 border-2 p-4 border-[#39FF14] rounded-full flex items-center justify-center 
-                             overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[280px]"
-                >
-                  <span className="hidden lg:block absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
-                    &gt;
-                  </span>
-                  <span className="block sm:hidden text-black text-sm font-semibold">
-                    {item.btn}
-                  </span>
-                </span>
+                    <div className="flex justify-left mt-10">
+                           <button
+    onClick={() => {
+      // Replace with your navigation logic
+      navigate("/sign")
+      console.log("Button clicked");
+    }}
+    className="relative inline-flex items-center justify-center font-semibold group w-full sm:w-auto"
+  >
+    {/* Expanding circle */}
+    <span
+      className="absolute left-0 w-40 sm:w-10 h-10 border-2 p-4 border-[#39FF14] rounded-full flex items-center justify-center 
+                 overflow-hidden transition-all duration-700 ease-in-out sm:group-hover:w-[280px]"
+    >
+      {/* '>' fades out on hover (only on lg) */}
+      <span className="hidden lg:block absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
+        &gt;
+      </span>
 
-                <span className="hidden sm:inline-block relative text-lg text-black pl-16 pr-4 transition-all duration-700 ease-in-out">
-                  {item.btn}
-                </span>
-              </button>
+      {/* Text inside circle for small screens */}
+      <span className="block sm:hidden text-black text-sm font-semibold">
+         {item.btn}
+      </span>
+    </span>
+
+    {/* Text outside circle for large screens */}
+    <span className="hidden sm:inline-block relative text-lg text-black pl-16 pr-4  transition-all duration-700 ease-in-out">
+      {item.btn}
+    </span>
+  </button>
+  </div>
           </div>
         </div>
       ))}

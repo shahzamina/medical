@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Gampro = () => {
-  const h1='Precision Gamma Camera Systems for Advanced Nuclear Imaging'
-  const p1='Enhance your nuclear medicine capabilities with high-performance gamma camera systems and components. Our solutions deliver exceptional image quality, accurate radiotracer detection, and reliable system uptime.'
-  const img='/images/gam.jpg'
+  const h1='Gamma Camera System'
+  const p1='We supply a wide variety of parts for Gamma Camera system of various brands'
+  const img='/images/gam.jpeg'
     const h2='Equipment /'
   const p=' Gamma Camera'
       const part = [

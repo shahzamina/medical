@@ -99,7 +99,7 @@ const customStyles = {
   placeholder: (base) => ({
     ...base,
     color: "#4A76C9",
-    fontStyle: "italic",
+    fontStyle: "san-serif",
   }),
   singleValue: (base) => ({ ...base, color: "#0046A0" }),
   menu: (base) => ({
@@ -133,8 +133,20 @@ const customStyles = {
 };
 
 const Sign = () => {
-  const { register, handleSubmit, control, setValue, watch,reset,formState:{isValid}  } = useForm({mode:'onChange'})
-
+  const { register, handleSubmit, control, setValue, watch,reset,formState:{isValid,isSubmitting }  } =  useForm({
+  mode: 'onChange',
+  defaultValues: {
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    email: '',
+    phoneNumber: '',
+    part: null,
+    modality: null,
+    manufacturer: null,
+    partDescription: ''
+  }
+});
   
 const parsedData = useMemo(() => {
   return part
@@ -173,10 +185,21 @@ const modalities = useMemo(() => {
       });
       const result = await res.json();
 
-      if (res.ok) {
-           alert(result.message);
-        reset(); 
-      } else {
+     if (res.ok) {
+  alert(result.message);
+  reset({
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    email: '',
+    phoneNumber: '',
+    part: null,
+    modality: null,
+    manufacturer: null,
+    partDescription: ''
+  });
+}
+ else {
  
         alert(result.message || "Something went wrong");
       }
@@ -323,6 +346,7 @@ const modalities = useMemo(() => {
 
 
       <button
+      disabled={isSubmitting}
         type="submit"
         className="mt-3 w-60 bg-[#1E90FF] text-white font-semibold py-3 rounded-lg hover:bg-[#0046A0] transition-all"
       >

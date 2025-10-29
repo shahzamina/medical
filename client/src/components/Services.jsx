@@ -56,8 +56,8 @@ const Services = () => {
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
   <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/50 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-    <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">Rental Services</h1>
-    <p  className="mt-4  text-white text-left px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">We provide flexible MRI rental services for smooth and reliable operations. </p>
+    <h1 className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">Rental Services</h1>
+    <p  className="mt-4  text-white text-center px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">We provide flexible MRI rental services for smooth and reliable operations. </p>
     
 
  
@@ -70,7 +70,7 @@ const Services = () => {
      
 
 <p className='px-10 lg:px-64 pb-4 text-lg text-justify'>We are proud to be equipped with a complete range of advanced tools and equipment, including Multivendor Magnet Power Supplies (GE, Siemens, Philips, Toshiba), Coldhead Replacement Kits, Helium Filling Kits, MRI-Compatible Tools, and RTI kV/mA Meters. These specialized instruments enable us to maintain and operate radiology systems at their highest efficiency, ensuring consistent performance and dependable scan quality. </p>
-<p className='text-left px-64 text-lg'> We also provide these tools on a rental basis, such as: </p>
+<p className='text-left px-6 lg:px-64 text-lg'> We also provide these tools on a rental basis, such as: </p>
 
 
 <Showcase content={content}  />

@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import { FaTiktok, FaYoutube, FaFacebookF } from "react-icons/fa";
-import {Routes, Route,Link } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 import viteLogo from '/vite.svg'
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -99,6 +99,7 @@ import About from './components/About';
 import Sign from './components/Sign';
 import Showcase from './components/Showcase';
 import Rental from './components/Rental';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
 
   return (
@@ -107,11 +108,12 @@ function App() {
  
     
 
-   
 
 
 
+  <ScrollToTop  />
 <Routes>
+
   <Route path='/' element={<Home />}  />
    <Route path='card' element={<Card />}  />
   

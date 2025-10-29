@@ -13,26 +13,26 @@ const navigate=useNavigate()
    <div className='w-screen mb-10 pb-10 mt-12'>
      
                 <div 
-                className='h-120 flex flex-row gap-4 w-screen '
+                className='h-auto flex flex-col lg:flex-row gap-0 lg:gap-4  w-screen '
                 >
                  {
                   part.map((part)=>(
 
                   
                     <>
-                        <div className='w-[50%] flex mb-10'
+                        <div className=' w-[50%] flex  mb-1'
                             key={part.id}>
-                            <div className=" w-[80%] mt-10 ml-20 h-[400px] overflow-hidden">
+                            <div className="w-[200%] lg:w-[120%] mt-10 ml-12 h-[100px] lg:h-[400px] overflow-hidden">
   <img
-    className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+    className="w-full h-full object-contain transition-transform duration-500 hover:scale-105 "
     src={part.img}
     alt={part.p}
   />
 </div>
 
                  </div>       
-                        <div className='font-bold flex flex-col pt-20 mr-30'>
-                            <h4 className='  text-left mb-3 !font-bold'>{part.h}</h4>
+                        <div className='font-bold flex flex-col pt-20 mr-2 lg:mr-20 ml-6 lg:ml-2'>
+                            <h4 className='text-left mb-3 !font-bold'>{part.h}</h4>
                             <div className='flex justify-left gap-2 p-1'>
                             <h5 className='!font-bold !text-2xl'>{part.h1}</h5>
                             <h5 className='!font-normal !text-xl mt-1 text-gray-400'>{part.p1}</h5>

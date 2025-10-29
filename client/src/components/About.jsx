@@ -29,15 +29,15 @@ const About = () => {
             }}
             className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-          <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">   EXPLORE INFINITY GLOBAL </h1>
-          <p  className="mt-4  text-white text-left px-12 sm:px-14 lg:px-12 lg:text-xl font-normal ">Leading Supplier of Radiology Equipment Parts</p>
+          <h1 className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">   EXPLORE INFINITY GLOBAL </h1>
+          <p  className="mt-4  text-white text-center px-12 sm:px-14 lg:px-12 lg:text-xl font-normal ">Leading Supplier of Radiology Equipment Parts</p>
  
 
 
         </div>
       
           </div>
-          <p className='px-20 text-xl text-justify text-gray-600 mt-5'>We are Infinity Global, deeply committed to empowering the healthcare sector worldwide. As a trusted supplier, we deliver top-tier, high-quality parts for all major radiology modalities—MRI, CT Scan, Digital X-Ray, Ultrasound, Mammography, Angiography, Fluoroscopy, DR & CR Systems.
+          <p className='px-6 lg:px-20 text-xl text-justify text-gray-600 mt-5'>We are Infinity Global, deeply committed to empowering the healthcare sector worldwide. As a trusted supplier, we deliver top-tier, high-quality parts for all major radiology modalities—MRI, CT Scan, Digital X-Ray, Ultrasound, Mammography, Angiography, Fluoroscopy, DR & CR Systems.
 We ensure your radiology equipment operates at peak performance with reliable parts and expert support.
 </p>
 
@@ -61,11 +61,11 @@ We ensure your radiology equipment operates at peak performance with reliable pa
 
 <div className='mt-6 mb-12'>
   <h2 className='!text-5xl py-8'>Why choose Infinity Global</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-20 pb-12 pt-12">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 lg:px-2 pb-12 pt-12">
   {cardData.map((card, index) => (
     <div
       key={index}
-      className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-101 hover:shadow-xl"
+      className="bg-white shadow-lg rounded-lg p-4 lg:p-2 transition-transform duration-300 hover:scale-101 hover:shadow-xl"
     >
       <img src={card.img} alt={card.title} className="w-48 h-46 mb-4 mx-auto" />
       <h3 className="text-xl font-semibold mb-2 text-[#0046A0] text-center">{card.title}</h3>

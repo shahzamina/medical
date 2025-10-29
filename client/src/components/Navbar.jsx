@@ -7,6 +7,8 @@ const Navbar = () => {
       const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
   
+  const [equipOpen, setEquipOpen] = useState(false);
+
 
     useEffect(() => {
       const handleScroll = () => {
@@ -140,7 +142,32 @@ const Navbar = () => {
 
 
       {/* Other Links */}
-      {[{ to: "/equip", label: "Equipents" },
+      <li onClick={() => setEquipOpen(!equipOpen)} className="text-white text-lg font-bold px-2 py-2 cursor-pointer">
+  Equipment {equipOpen ? '▴' : '▾'}
+</li>
+
+{equipOpen && (
+  <ul className="pl-4">
+  {[
+    { to: '/mripro', label: 'MRI' },
+    { to: '/ctpro', label: 'CT Scan' },
+    { to: '/xrypro', label: 'Digital X-Ray' },
+    { to: '/crpro', label: 'CR System' },
+    { to: '/ultrapro', label: 'Ultrasound' },
+    { to: '/mampro', label: 'Mammography' },
+    { to: '/fluopro', label: 'Fluoroscopy' },
+    { to: '/gampro', label: 'Gamma Camera' },
+    { to: '/angpro', label: 'Angiography' },
+  ].map(({ to, label }) => (
+    <Link style={{textDecoration:'none'}} key={to} to={to} onClick={() => setMenuOpen(false)}>
+      <li className="text-white py-2 text-left">{label}</li>
+    </Link>
+  ))}
+</ul>
+
+)}
+
+      {[
         { to: "/allpro", label: "Parts" },
         { to: "/ser", label: "Rental Services" },
         { to: "/about", label: "Who we are" },

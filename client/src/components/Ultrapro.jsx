@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Ultrapro = () => {
-  const h1='High-Performance Ultrasound Systems for Accurate Real-Time Imaging'
-  const p1='Achieve clarity, speed, and precision with our advanced ultrasound systems and replacement parts. Built for versatility and reliability, our solutions support a wide range of clinical applications — from general imaging to specialized diagnostics.'
-  const img='/images/ultr.jpg'
+  const h1='Ultrasound System'
+  const p1='We offer a comprehensive range of Ultrasound system parts of different manufacturers'
+  const img='/images/ultr.jpeg'
     const h2='Equipment /'
   const p=' Ultrasound'
       const part = [

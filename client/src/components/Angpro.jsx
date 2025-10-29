@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Angpro = () => {
-  const h1='Precision Angiography Solutions for Advanced Vascular Imaging'
-  const p1='Experience the next level of vascular imaging with our state-of-the-art angiography systems. Designed for exceptional clarity and speed, our equipment supports accurate diagnostics and smoother workflows for interventional procedures.'
+  const h1='Angiography System'
+  const p1='We provide comprehensive parts coverage for multiple manufacturers of Angiography system'
   
-  const img='/images/angio.jpg'
+  const img='/images/angio.jpeg'
     const h2='Equipment /'
   const p=' Angiography'
       const part = [

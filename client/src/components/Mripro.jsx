@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Mripro = () => {
-  const h1='Advanced MRI Systems for Superior Diagnostic Precision'
-  const p1='Experience powerful imaging performance with our state-of-the-art MRI systems and components. Engineered for clarity, reliability, and patient comfort, our MRI solutions deliver detailed anatomical visuals essential for accurate diagnoses.'
+  const h1='MRI System'
+  const p1='We provide a wide range of MRI system parts of various manufacturers'
   const img='/images/mri.jpg'
    const h2='Equipment /'
   const p=' MRI'

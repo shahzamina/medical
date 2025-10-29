@@ -76,8 +76,8 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
   <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-    <h1 className="text-white text-left sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">{h1}</h1>
-    <p  className="mt-4  text-white text-left px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">{p1} </p>
+    <h1 className=" text-white sm:!text-sm lg:!text-6xl font-bold px-5  mt-5 ">{h1}</h1>
+    <p  className="mt-4  text-white text-center px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">{p1} </p>
     
  {/*<Link
       

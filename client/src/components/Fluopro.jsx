@@ -5,9 +5,9 @@ import Fluoro from './Fluoro';
 import Othparts from './Othparts';
 
 const Fluopro = () => {
-  const h1='Advanced Fluoroscopy Systems for Real-Time Imaging Precision'
-  const p1='Experience seamless, real-time visualization with our high-quality fluoroscopy systems and components. Designed for consistent performance and patient safety, our fluoroscopy solutions deliver sharp, dynamic images to support complex diagnostic and interventional procedures.'
-  const img='/images/fluro.jpg'
+  const h1='Fluoroscopy System'
+  const p1='We deliver a wide array of Fluoroscopy system parts of multiple OEMs'
+  const img='/images/fluro.jpeg'
    const h2='Equipment /'
   const p=' Fluoroscopy'
       const part = [

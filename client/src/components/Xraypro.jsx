@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Xraypro = () => {
-  const h1='Reliable Digital X-Ray Systems for Precise Diagnostic Imaging'
-  const p1='Enhance your imaging workflow with dependable Digital X-Ray systems and parts built for accuracy, speed, and durability. Our Digital X-Ray solutions provide sharp, detailed images that support confident diagnoses across a wide range of clinical settings.'
-  const img='/images/xray.jpg'
+  const h1='Digital X-Ray System'
+  const p1='We deliver a diverse range of Digital X-Ray system parts of multiple OEMs'
+  const img='/images/xray.jpeg'
     const h2='Equipment /'
   const p=' Digital X-Ray'
       const part = [

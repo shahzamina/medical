@@ -33,10 +33,10 @@ const Footer = () => {
 
     <div className='flex flex-col items-center md:flex-row md:justify-between px-5'>
       <div className='hidden md:block'> 
-        <Link><img className=' w-40 ml-18' src="/images/inf123.png" alt="" /></Link>
+        <Link><img className=' w-32 md:w-40  ml-18' src="/images/inf123.png" alt="" /></Link>
       </div>
 
-      <div className='flex gap-4 justify-center md:justify-end lg:mr-50 sm:mt-3 md:mt-0'>
+      <div className='  flex gap-4 justify-center md:justify-end lg:mr-50 sm:mt-5 md:mt-0 py-3'>
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
            className="inline-block transform transition duration-300 hover:-translate-y-0.5 hover:scale-102">
           <FaFacebookF className="text-2xl text-blue-400" />
@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className=' flex flex-col'>
+    <div className='flex flex-col'>
       <ul className='flex gap-3 ml-22'>
         <li>
           <Link style={{textDecoration:'none'}} 

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Ctpro = () => {
-const h1='High-Performance CT Scan Systems for Accurate Diagnostic Imaging'
-const p1='Deliver precise and detailed diagnostic results with our advanced CT scan systems and replacement parts. Designed for reliability, speed, and clarity, our CT solutions help healthcare providers capture high-resolution images with reduced downtime.'
+const h1='CT Scan System'
+const p1='We supply a comprehensive range of CT Scan system parts of different brands'
 const img='/images/ctscan.jpg'
   const h2='Equipment /'
   const p=' CT Scan'

@@ -3,7 +3,17 @@ import { useForm, Controller } from "react-hook-form";
 import CreatableSelect from "react-select/creatable";
 
 const Rental = () => {
-  const { register, handleSubmit, control, setValue, watch,reset } = useForm();
+    const defaultValues = {
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    email: "",
+    phoneNumber: "",
+    rentalService: null,
+    partDescription: "",
+  };
+
+  const { register, handleSubmit, control, setValue, watch,reset,formState:{isValid,isSubmitting}  } =useForm({mode:'onChange',defaultValues})
 
   const customStyles = {
   control: (base, state) => ({
@@ -74,10 +84,12 @@ const Rental = () => {
 
       if (res.ok) {
            alert(result.message);
-        reset(); 
+        reset(defaultValues); 
+       // setValue("rentalService", null)
+       
       } else {
  
-        alert(result.message || "Something went wrong");
+        alert(result.message );
       }
     } catch (error) {
       alert("Server error — please try again later.");
@@ -170,6 +182,7 @@ const Rental = () => {
 
 
       <button
+       disabled={isSubmitting}
         type="submit"
         className="mt-3 w-60 bg-[#1E90FF] text-white font-semibold py-3 rounded-lg hover:bg-[#0046A0] transition-all"
       >

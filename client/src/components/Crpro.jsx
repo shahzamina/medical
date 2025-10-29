@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Crpro = () => {
-const h1='Advanced Computed Radiography Solutions for Reliable Digital Imaging'
-const p1='Upgrade your imaging workflow with dependable CR technology designed for accuracy and performance. Our Computed Radiography systems and parts provide sharp digital images, quick turnaround times, and long-lasting reliability.'
- const img='/images/cr.jpg'
+const h1='CR System'
+const p1='We provide a wide range of Computed Radiography (CR) system parts of multiples brands'
+ const img='/images/cr.jpeg'
    const h2='Equipment /'
-  const p=' CR'
+  const p='CR'
       const part = [
         
         

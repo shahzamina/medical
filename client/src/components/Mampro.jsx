@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import Othparts from './Othparts';
 
 const Mampro = () => {
-   const h1='High-Definition Mammography Systems for Confident Breast Imaging'
-  const p1='Deliver clarity and confidence in every diagnosis with our advanced mammography systems and parts. Designed for precision and patient comfort, our solutions provide high-resolution breast imaging that supports early detection and accurate assessment.'
-  const img='/images/mam.jpg'
+   const h1='Mammography System'
+  const p1='We supply a diverse range of Mammography system parts of various brands'
+  const img='/images/mam.jpeg'
    const h2='Equipment /'
   const p=' Mamography'
       const part = [
