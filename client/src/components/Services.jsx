@@ -50,7 +50,7 @@ const Services = () => {
     <>
       <div style={{ backgroundImage: "url('/images/ren1.jpeg')",
         backgroundRepeat:'no-repeat',
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundPosition:'center'
 
       }}

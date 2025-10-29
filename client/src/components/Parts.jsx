@@ -70,7 +70,7 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
     <>
       <div style={{ backgroundImage: `url(${img})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundPosition:'center'
 
       }}
