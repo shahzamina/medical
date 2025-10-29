@@ -212,7 +212,7 @@ const modalities = useMemo(() => {
   return (
 
     <>
-  <div className=' bg-gray-300 h-24'>
+  <div className=' bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30  h-24'>
 
      </div>
      

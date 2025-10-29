@@ -2,7 +2,7 @@ import React, { useState,useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CreatableSelect from 'react-select/creatable';
-
+import { motion } from "framer-motion";
 const Othparts = ({part=[],h1,p1,img,h2,p,style}) => {
     const [selectedManufacturer, setSelectedManufacturer] = useState(null);
   const [selectedModality, setSelectedModality] = useState(null);
@@ -64,14 +64,31 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
     <>
       <div style={{ backgroundImage: `url(${img})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100% 100%',
+        backgroundSize:'cover',
         backgroundPosition:'center'
 
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[600px]">
   <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-    <h1 className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">{h1}</h1>
-    <p  className="mt-4  text-white text-center px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">{p1} </p>
+   <motion.h1
+  initial={{ opacity: 0, y: -30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5"
+>
+  {h1}
+</motion.h1>
+
+<motion.p
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+  className="mt-4 text-white text-center px-12 sm:px-20 lg:px-12 lg:text-xl font-normal"
+>
+  {p1}
+</motion.p>
     
 
 

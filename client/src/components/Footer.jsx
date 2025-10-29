@@ -17,7 +17,7 @@ const Footer = () => {
     <div className=' sm:flex sm:flex-col lg:flex lg:flex-row justify-between border-b-2 border-gray-600 px-5 mx-10'>
       <div>
         <ul className='ml-2 text-left'>
-          <Link className='text-black text-lg'><li>About Infinity Global</li></Link>
+          <Link to='/about' className='text-black text-lg'><li>About Infinity Global</li></Link>
         </ul>
       </div>
 

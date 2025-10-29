@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Card from './Card'
-
+import { motion } from "framer-motion";
 
 
 
@@ -74,12 +74,26 @@ const Home = () => {
           {/* Gradient overlay */}
          <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-center justify-center sm:pb-10 pb-10 lg:pt-10">
 
-            <h1 className="text-white text-left md:!text-6xl sm:!font-normal lg:font-bold px-5 sm:px-10">
-              Your Medical Imaging Equipment Partner
-            </h1>
-            <p className="text-white text-left px-12  lg:text-4xl lg:font-bold mt-4">
-              We help you Buy, Sell, and Service Imaging Equipment.
-            </p>
+            <motion.h1
+        initial={{ opacity: 0, y: -40, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-white text-left md:!text-6xl sm:!font-normal lg:font-bold"
+      >
+        Your Medical Imaging Equipment Partner
+      </motion.h1>
+
+      {/* Animated Paragraph */}
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+        className="text-white text-left px-12 lg:text-4xl lg:font-bold mt-4"
+      >
+        We help you Buy, Sell, and Service Imaging Equipment.
+      </motion.p>
           </div>
         </div>
 

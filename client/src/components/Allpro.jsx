@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import Sign from './Sign';
 
 const Allpro = () => {
-  const h1='Radiology Equipment Parts '
-  const p1='Explore our wide range of parts, we’ll assit you in finding the ideal used part for your equipment'
+ 
+  const h1='Medical Imaging Parts '
+  const p1='High Quality Parts for any Medical Imaging System'
  
 const img='/images/home1.jpeg'
 const p='High-Quality Replacement Parts for Every Modality'

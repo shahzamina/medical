@@ -8,7 +8,7 @@ const Mampro = () => {
   const p1='We supply a diverse range of Mammography system parts of various brands'
   const img='/images/mam.jpeg'
    const h2='Equipment /'
-  const p=' Mamography'
+  const p=' Mammography'
       const part = [
         
         

@@ -1,6 +1,6 @@
 import React from 'react'
 import Showcase from './Showcase';
-
+import { motion } from "framer-motion";
 const Services = () => {
    const content = [
     {
@@ -50,14 +50,32 @@ const Services = () => {
     <>
       <div style={{ backgroundImage: "url('/images/ren1.jpeg')",
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100% 100%',
+        backgroundSize:'cover',
         backgroundPosition:'center'
 
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
   <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/50 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-    <h1 className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">Rental Services</h1>
-    <p  className="mt-4  text-white text-center px-12 sm:px-20  lg:px-12 lg:text-xl font-normal ">We provide flexible MRI rental services for smooth and reliable operations. </p>
+       <motion.h1
+        initial={{ opacity: 0, y: -30, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5"
+      >
+        Rental Services
+      </motion.h1>
+
+      {/* Animated Paragraph */}
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+        className="mt-4 text-white text-center px-12 sm:px-20 lg:px-12 lg:text-xl font-normal"
+      >
+        We provide flexible MRI rental services for smooth and reliable operations.
+      </motion.p>
     
 
  

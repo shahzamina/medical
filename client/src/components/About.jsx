@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from "framer-motion";
 const About = () => {
   const cardData = [
   {
@@ -21,16 +22,42 @@ const About = () => {
 
   return (
     <div>
-<div style={{ backgroundImage: 'url(/images/about.jpg)',
+<div style={{ backgroundImage: 'url(/images/map.PNG)',
               backgroundRepeat:'no-repeat',
-              backgroundSize:'100% 100%',
+              backgroundSize:'cover',
               backgroundPosition:'center'
       
             }}
             className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-          <h1 className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5 ">   EXPLORE INFINITY GLOBAL </h1>
-          <p  className="mt-4  text-white text-center px-12 sm:px-14 lg:px-12 lg:text-xl font-normal ">Leading Supplier of Radiology Equipment Parts</p>
+         <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-white sm:!text-sm lg:!text-4xl font-bold px-5 mt-5"
+        >
+          EXPLORE
+        </motion.h1>
+
+        {/* Heading 2 */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+          className="text-white sm:!text-sm lg:!text-6xl font-bold px-5 mt-2"
+        >
+          INFINITY GLOBAL
+        </motion.h1>
+
+        {/* Paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
+          className="mt-4 text-white px-12 sm:px-14 lg:px-12 lg:text-xl font-normal"
+        >
+          Leading Supplier of Radiology Equipment Parts
+        </motion.p>
  
 
 
