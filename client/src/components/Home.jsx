@@ -79,7 +79,7 @@ const Home = () => {
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-white text-left md:!text-6xl sm:!font-normal lg:font-bold"
+        className="text-white text-center  md:!text-6xl sm:!font-normal lg:font-bold"
       >
         Your Medical Imaging Equipment Partner
       </motion.h1>

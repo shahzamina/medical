@@ -6,10 +6,10 @@ import Sign from './Sign';
 const Allpro = () => {
  
   const h1='Medical Imaging Parts '
-  const p1='High Quality Parts for any Medical Imaging System'
+  const p1='Explore our wide rang of parts, we will assit you in finding the ideal used part for your Equipment'
  
 const img='/images/home1.jpeg'
-const p='High-Quality Replacement Parts for Every Modality'
+const p=' High Quality Parts for every Medical Imaging System'
 const partStyle = {
  marginLeft:'10px',
   color: 'black',              // text color: black

@@ -8,6 +8,10 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
   
   const [equipOpen, setEquipOpen] = useState(false);
+const [isEquipOpen, setIsEquipOpen] = useState(false);
+
+  
+
 
 
     useEffect(() => {
@@ -34,11 +38,14 @@ const Navbar = () => {
       ${isScrolled ? 'bg-white/70 shadow-md' : 'bg-transparent'}
       `}>
       <Link to='/'>
+<div className="flex items-center">
   <img
-    className='w-40 sm:w-28 md:w-64 lg:w-80 h-40 mt-5 ml-4 sm:ml-4 md:ml-6 pl-2 sm:pl-4 md:pl-3 pb-12'
-    src={isScrolled ? "/images/log1.png" : "/images/log1.png"}
+    className="w-72 md:w-80 lg:w-96 h-24 md:h-28 lg:h-32 ml-4"
+    src={isScrolled ? "/images/lo123.png" : "/images/log.png"}
     alt="Logo"
   />
+</div>
+
 </Link>
 
 
@@ -72,20 +79,35 @@ const Navbar = () => {
 
  
       <ul className='mr-4 mt-3  hidden lg:flex lg:flex-row  justify-right ml-160 md:ml-80 lg:ml-120 w-full gap-6 p-2'>
-<li className='relative group  mt-1'><button className={`mb-0 font-bold text-lg border-b-2 border-transparent cursor-pointer transition-all duration-300  inline-block  ${isScrolled
+<li
+  className="relative group mt-1"
+  onMouseEnter={() => setIsEquipOpen(true)}
+  onMouseLeave={() => setIsEquipOpen(false)}
+>  <button
+    className={`mb-0 font-bold text-lg border-b-2 border-transparent cursor-pointer transition-all duration-300 inline-block ${
+      isScrolled
         ? 'text-black hover:text-gray-700 hover:border-black'
         : 'text-white hover:text-gray-200 hover:border-white'
-      }`}>Equipment ▾</button>
-<ul className='p-0  hidden absolute left-0 top-full z-10 bg-white  group-hover:block  w-[250px] shadow-lg '>
-  <Link to='/mripro'><li className='inline-block text-lg font-bold text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>MRI</li></Link>
-  <Link to='/ctpro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CT Scan</li></Link>
-  <Link to='/xrypro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Digital X-Ray</li></Link>
-  <Link to='/crpro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CR System</li></Link>
-  <Link to='/ultrapro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Ultrasound</li></Link>
-  <Link to='/mampro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Mammography</li></Link>
-  <Link to='/fluopro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  px-3 py-3 cursor-pointer w-full'>Fluoroscopy</li></Link>
-  <Link to='/gampro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Gamma Camera</li></Link>
-<Link to='/angpro'><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Angiography</li></Link>
+    }`}
+  >
+    Equipment ▾
+  </button>
+
+
+ <ul
+    className={`p-0 absolute left-0 top-full z-10 bg-white w-[250px] shadow-lg transition-all duration-300 ${
+      isEquipOpen ? 'block' : 'hidden'
+    }`}
+  >
+  <Link to='/mripro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>MRI</li></Link>
+  <Link to='/ctpro'  onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CT Scan</li></Link>
+  <Link to='/xrypro'  onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Digital X-Ray</li></Link>
+  <Link to='/crpro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>CR System</li></Link>
+  <Link to='/ultrapro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Ultrasound</li></Link>
+  <Link to='/mampro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Mammography</li></Link>
+  <Link to='/fluopro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  px-3 py-3 cursor-pointer w-full'>Fluoroscopy</li></Link>
+  <Link to='/gampro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3  hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Gamma Camera</li></Link>
+<Link to='/angpro' onClick={() => setIsEquipOpen(false)}><li className='inline-block text-lg font-bold  text-left text-[#0046A0]/90 px-3 py-3 hover:text-white hover:bg-gradient-to-r hover:from-[#00BFFF] hover:via-[#1E90FF] hover:to-[#104E8B] transition-all duration-300  cursor-pointer w-full'>Angiography</li></Link>
 
 
 
@@ -110,7 +132,7 @@ const Navbar = () => {
          <Link to='/about'><li className={` font-bold text-lg border-b-2 border-transparent  cursor-pointer transition-all duration-300  inline-block  ${isScrolled
         ? 'text-black hover:text-gray-700 hover:border-black'
         : 'text-white hover:text-gray-200 hover:border-white'
-      }`}>Who we are</li></Link>
+      }`}>About us</li></Link>
          <Link to='/sign'><li className={` font-bold text-lg border-b-2 border-transparent  cursor-pointer transition-all duration-300  inline-block  ${isScrolled
         ? 'text-black hover:text-gray-700 hover:border-black'
         : 'text-white hover:text-gray-200 hover:border-white'
@@ -170,7 +192,7 @@ const Navbar = () => {
       {[
         { to: "/allpro", label: "Parts" },
         { to: "/ser", label: "Rental Services" },
-        { to: "/about", label: "Who we are" },
+        { to: "/about", label: "About us" },
         { to: "/contact", label: "Contact Us" },
       ].map(({ to, label }) => (
         <Link style={ {textDecoration:'none'}} key={to} to={to} onClick={() => setMenuOpen(false)}>

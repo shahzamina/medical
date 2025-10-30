@@ -68,62 +68,45 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
   return (
 
     <>
-      <div style={{ backgroundImage: `url(${img})`,
-        backgroundRepeat:'no-repeat',
-        backgroundSize:'cover',
-        backgroundPosition:'center'
-
+      
+   
+ <div
+      style={{
+        backgroundImage: `url(${img})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover", // keeps globe fully visible
+        backgroundPosition: "center",
       }}
-      className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
-  <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
-  
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="text-white sm:!text-sm lg:!text-6xl font-bold px-5 mt-5"
-      >
-        {h1}
-      </motion.h1>
+       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[600px]"
+    >
 
-      {/* Animated Paragraph */}
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-        className="mt-4 text-white text-center px-12 sm:px-20 lg:px-12 lg:text-xl font-normal"
-      >
-        {p1}
-      </motion.p>
- {/*<Link
+      {/* Animated Texts */}
+      <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
+        <motion.h1
+         initial={{ opacity: 0, y: -30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  className="text-white text-center sm:!text-sm lg:!text-6xl font-bold px-5 mt-5"
+        >
+          {h1}
+        </motion.h1>
+
+        <motion.p
+           initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+  className="mt-4 text-white text-center px-12 sm:px-20 lg:px-12 lg:text-xl font-normal"
+        >
+          {p1}
+        </motion.p>
+      </div>
+
       
-       style={{ textDecoration: "none" }}
-       className="relative inline-flex items-center justify-center text-[#39FF14] font-semibold group mt-4"
-     >
-  
-       <span
-         className="absolute left-0 w-10 h-10 border-2 p-4 ml-12 border-[#39FF14] rounded-full flex items-center justify-center 
-                    overflow-hidden transition-all duration-700 ease-in-out group-hover:w-[330px]"
-       >
-     
-         <span className="absolute text-[#39FF14] text-xl transition-opacity duration-700 ease-in-out group-hover:opacity-0">
-           &gt;
-         </span>
-       </span>
-     
-      
-       <span className="relative text-lg text-white pl-16 pr-240 transition-all duration-700 ease-in-out">
-  REQUEST A PART/Get A Quote
-       </span>
-     </Link>*/}
-    
- 
-
-  </div>
-
     </div>
+
+
 
 <div className='flex ml-20 mt-8 mb-0 items-center space-x-2'>
   <Link

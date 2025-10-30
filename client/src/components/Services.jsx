@@ -41,7 +41,7 @@ const Services = () => {
      {
       heading: "RTI kV/mA Meters",
       paragraph: "The Piranha MULTI X-ray meter provides a complete solution for precise diagnostics and quality assurance across Radiography/Fluoroscopy, CT and Mammography systems. It accurately measures kVp, exposure time, HVL, total filtration, dose, dose rate, and displays waveforms—offering comprehensive performance evaluation in one device. ",
-      img: "/images/r6.png",
+      img: "/images/rti.jpg",
       btn: "Request A Service Quote",
      
     },
