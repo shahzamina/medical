@@ -32,7 +32,16 @@ const Parts = ({h1,p1,img,h2,p,style}) => {
     
   
 
-c
+
+const parsedData = useMemo(() =>
+  part.map(item => ({
+    ...item,
+    manufacturer: item.manufacturer?.trim() || '',
+    modality: item.modality?.trim() || '',
+    p: item.product || 'Unnamed Product',
+    img: item.image || '/placeholder.jpg',
+  })), [part]);
+ 
 
 
   // --- Unique manufacturer list ---
