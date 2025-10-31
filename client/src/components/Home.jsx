@@ -31,7 +31,7 @@ const Home = () => {
 
     const img=[
       {img:'/images/ctscan.jpg'},
-        {img:'/images/hero.jpg'},
+       // {img:'/images/hero.jpg'},
           {img:'/images/home3.jpeg'},
     ]
 
@@ -72,7 +72,8 @@ const Home = () => {
           </div>
 
           {/* Gradient overlay */}
-         <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-center justify-center sm:pb-10 pb-10 lg:pt-10">
+         <div className="absolute inset-0 bg-gradient-to-br from-[#0a1f44]/90 via-[#3b4c66]/70 to-[#d1d5db]/30
+ z-10 flex flex-col items-center justify-center sm:pb-10 pb-10 lg:pt-10">
 
             <motion.h1
         initial={{ opacity: 0, y: -40, scale: 0.95 }}

@@ -9,15 +9,10 @@ const Ultrapro = () => {
   const img='/images/ultr.jpeg'
     const h2='Equipment /'
   const p=' Ultrasound'
-      const part = [
-        
-          {img:'/images/ultras1.jpg', p:'5761561 - GE Healthcare - Ultrasound - OSCO Charger Board - Logiq F8 Vivid', link:'/ultra'},
-        
-      
-        ];
+    const modality='Ultrasound'
   return (
     <div>
-     <Othparts h1={h1} p1={p1}  h2={h2} p={p}  img={img} part={part} />
+     <Othparts h1={h1} p1={p1}  h2={h2} p={p}  img={img} modality={modality}/>
     </div>
   )
 }

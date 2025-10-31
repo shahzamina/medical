@@ -1,37 +1,48 @@
-import React, { useState,useMemo } from 'react'
+import React, { useState,useMemo,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CreatableSelect from 'react-select/creatable';
 import { motion } from "framer-motion";
-const Othparts = ({part=[],h1,p1,img,h2,p,style}) => {
+const Othparts = ({h1,p1,img,h2,p,style,modality }) => {
     const [selectedManufacturer, setSelectedManufacturer] = useState(null);
   const [selectedModality, setSelectedModality] = useState(null);
+ const [part, setPart] = useState([]);
 
+  useEffect(() => {
+    const fetchParts = async () => {
+      try {
+        const res = await fetch(`http://localhost:5000/get?modality=${modality}`);
+        const data = await res.json();
+        setPart(data);
+      } catch (err) {
+        console.error("Failed to fetch parts:", err);
+      }
+    };
+
+    if (modality) {
+      fetchParts();
+    }
+  }, [modality]);
+
+  // ...rest of your logic (parsedData, filters, pagination, etc.)
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9; // you can change this to 6, 9, etc.
 
-  const parsedData = useMemo(() =>
-    part.map(item => {
-      const parts = item.p.split(' - ');
-      return {
-        ...item,
-        manufacturer: parts[1]?.trim() || '',
-        modality: parts[2]?.trim() || '',
-      };
-    }), [part]);
+const parsedData = useMemo(() =>
+  part.map(item => ({
+    ...item,
+    manufacturer: item.manufacturer?.trim() || '',
+    modality: item.modality?.trim() || '',
+    p: item.product || 'Unnamed Product',
+    img: item.image || '/placeholder.jpg',
+  })), [part]);
+ 
 
   // --- Unique manufacturer list ---
   const manufacturers = [...new Set(parsedData.map(i => i.manufacturer))]
     .map(m => ({ value: m, label: m }));
 
-  // --- Filter modalities for selected manufacturer ---
-  const modalities = selectedManufacturer
-    ? [...new Set(parsedData
-        .filter(i => i.manufacturer === selectedManufacturer.value)
-        .map(i => i.modality))]
-        .map(m => ({ value: m, label: m }))
-    : [];
 
   // --- Filter items based on current selections ---
  const filteredItems = parsedData.filter(item =>
@@ -69,7 +80,7 @@ const currentItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
 
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[600px]">
-  <div className="absolute inset-0  bg-gradient-to-tr from-[#003080]/70 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
+  <div className="absolute inset-0   bg-gradient-to-br from-gray-700/70 via-gray-500/50 to-gray-300/30 z-10 flex flex-col items-left justify-center">
    <motion.h1
   initial={{ opacity: 0, y: -30 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -205,14 +216,27 @@ dropdownIndicator: (base) => ({
  {/* --- CARDS --- */}
       <div className='flex flex-wrap justify-center gap-4 '>
         {currentItems.map((v, idx) => (
+           
           <div
             key={idx}
             className="overflow-hidden w-80 h-80 shadow-lg rounded-sm transform transition duration-300 hover:-translate-y-0.5 hover:scale-102"
           >
-            <Link style={{textDecoration:'none'}} to={v.link} className="text-black no-underline">
-              <img className="w-full h-55 object-cover  bg-white" src={v.img} alt={v.p} />
-              <h6 className="font-bold px-4 mt-2">{v.p}</h6>
-            </Link>
+            
+            <div    onClick={() => navigate("/allmod", { state: { part: v } })}
+        className="cursor-pointer">
+<img className="w-full h-55 object-cover bg-white" src={`http://localhost:5000${v.image}`}
+ alt={v.p} />
+
+           <h6 className="font-bold px-4 mt-2 text-[#001F3F]">
+ 
+  {v.partNumber ? `${v.partNumber}` : ''} 
+  {v.manufacturer ? ` - ${v.manufacturer}` : ''} 
+  {v.modality ? ` - ${v.modality}` : ''} 
+  {v.p ? ` - ${v.p}` : ''} 
+  {v.modal ? ` - ${v.modal}` : ''}
+</h6>
+
+            </div>
           </div>
         ))}
 

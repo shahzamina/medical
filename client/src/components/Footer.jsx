@@ -3,16 +3,8 @@ import { Link } from 'react-router-dom'
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 const Footer = () => {
   return (
-   <div className='py-10 mt-auto' 
-     style={{
-       backgroundImage: "url('/images/map.PNG')",
-       backgroundSize: "cover",
-       backgroundPosition: "center",
-       backgroundRepeat: "no-repeat",
-       backgroundAttachment: "fixed",
-     }}
->
-  <div className='flex flex-col gap-0'>
+
+  <div className='flex flex-col gap-0 pt-5'>
 
     <div className=' sm:flex sm:flex-col lg:flex lg:flex-row justify-between border-b-2 border-gray-600 px-5 mx-10'>
       <div>
@@ -71,7 +63,7 @@ const Footer = () => {
     </div>
 
   </div>
-</div>
+
 
   )
 }

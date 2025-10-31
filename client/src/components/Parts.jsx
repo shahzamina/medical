@@ -1,31 +1,39 @@
-import React, { useState,useMemo } from 'react'
+import React, { useState,useMemo ,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CreatableSelect from 'react-select/creatable';
 import { motion } from "framer-motion";
-const Parts = ({part=[],h1,p1,img,h2,p,style}) => {
+import { useNavigate } from "react-router-dom";
+
+const Parts = ({h1,p1,img,h2,p,style}) => {
+
+  const navigate=useNavigate()
     const [selectedManufacturer, setSelectedManufacturer] = useState(null);
   const [selectedModality, setSelectedModality] = useState(null);
-
+  const [part, setParts] = useState([]); // fetched data
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9; // you can change this to 6, 9, etc.
 
 
- 
+ useEffect(() => {
+    const fetchParts = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/");
+        const data = await res.json();
+        setParts(data.reverse());
+        console.log("Fetched Parts:", data);
+      } catch (err) {
+        console.error("Error fetching parts:", err);
+      }
+    };
+    fetchParts();
+  }, []);
     
   
 
+c
 
-  const parsedData = useMemo(() =>
-    part.map(item => {
-      const parts = item.p.split(' - ');
-      return {
-        ...item,
-        manufacturer: parts[1]?.trim() || '',
-        modality: parts[2]?.trim() || '',
-      };
-    }), [part]);
 
   // --- Unique manufacturer list ---
   const manufacturers = [...new Set(parsedData.map(i => i.manufacturer))]
@@ -288,15 +296,27 @@ dropdownIndicator: (base) => ({
  {/* --- CARDS --- */}
       <div className='flex flex-wrap justify-center gap-4 '>
         {currentItems.map((v, idx) => (
+           
           <div
             key={idx}
             className="overflow-hidden w-80 h-80 shadow-lg rounded-sm transform transition duration-300 hover:-translate-y-0.5 hover:scale-102"
           >
-            <Link style={{textDecoration:'none'}} to={v.link} className="text-black no-underline">
-<img className="w-full h-55 object-cover bg-white" src={v.img} alt={v.p} />
+            
+            <div    onClick={() => navigate("/allmod", { state: { part: v } })}
+        className="cursor-pointer">
+<img className="w-full h-55 object-cover bg-white" src={`http://localhost:5000${v.image}`}
+ alt={v.p} />
 
-              <h6 className="font-bold px-4 mt-2">{v.p}</h6>
-            </Link>
+           <h6 className="font-bold px-4 mt-2 text-[#001F3F]">
+ 
+   {v.partNumber ? `${v.partNumber}` : ''} 
+  {v.manufacturer ? ` - ${v.manufacturer}` : ''} 
+  {v.modality ? ` - ${v.modality}` : ''} 
+  {v.p ? ` - ${v.p}` : ''} 
+  {v.modal ? ` - ${v.modal}` : ''}
+</h6>
+
+            </div>
           </div>
         ))}
 

@@ -55,7 +55,7 @@ const Services = () => {
 
       }}
       className="bg-gray-100 relative w-screen sm:w-[20%] md:w-[100%] lg:w-[100%] h-[550px]">
-  <div className="absolute inset-0 bg-gradient-to-tr from-[#003080]/50 via-[#0066CC]/50 to-[#3399FF]/30 z-10 flex flex-col items-left justify-center">
+  <div className="absolute inset-0  bg-gradient-to-br from-gray-700/70 via-gray-500/50 to-gray-300/30 z-10 flex flex-col items-left justify-center">
        <motion.h1
         initial={{ opacity: 0, y: -30, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}

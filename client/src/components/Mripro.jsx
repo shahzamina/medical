@@ -9,18 +9,10 @@ const Mripro = () => {
   const img='/images/mri.jpg'
    const h2='Equipment /'
   const p=' MRI'
-      const part = [
-        
-         
-           {img:'/images/mri1.jpg', p:'6250034 - GE Healthcare - MRI - IXG Board  - 6250035 REV 2', link:'/mri'},
-          {img:'/images/mri21.jpg', p:'85851328 - HITACHI - MRI - PCB SBS Fiber Optic Board ', link:'/mripcb'},
-{img:'/images/mri22.jpg', p:'85851328 - HITACHI - MRI - PCB SBS Fiber Optic Board ', link:'/mripcb'},
-
-        
-        ];
+    const modality='MRI'
   return (
     <div>
-       <Othparts h1={h1} p1={p1} h2={h2} p={p}   img={img} part={part} />
+       <Othparts h1={h1} p1={p1} h2={h2} p={p}   img={img} modality={modality}/>
     </div>
   )
 }

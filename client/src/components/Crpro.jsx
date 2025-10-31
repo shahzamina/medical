@@ -9,19 +9,10 @@ const p1='We provide a wide range of Computed Radiography (CR) system parts of m
  const img='/images/cr.jpeg'
    const h2='Equipment /'
   const p='CR'
-      const part = [
-        
-        
-          { img:'/images/cr1.jpg', p:'A800426.1 - AGFA Healthcare - CR - Laser Board 1', link:'/crlas'},
-          { img:'/images/cr2.jpg', p:'F8.5170.3500.X - AGFA Healthcare - CR -Laser Board 2', link:'/crlasb'},
-          { img:'/images/cr3.jpg', p:'8.5170.4120.4 - AGFA Healthcare - CR - Power Distribution Board ', link:'/crpow'},
-          { img:'/images/cr4.jpg', p:'8517014800 - AGFA Healthcare - CR -Touch Display Board ', link:'/crtouch'},
-        
-          
-        ];
+     const modality='CR'
   return (
     <div>
-     <Othparts h1={h1} p1={p1} h2={h2} p={p} img={img} part={part} />
+     <Othparts h1={h1} p1={p1} h2={h2} p={p} img={img} modality={modality}/>
     </div>
   )
 }
